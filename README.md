@@ -127,7 +127,7 @@ python 3.7.4
 + **第二步，跑全量的sample表，将结果进行数据核验**
     1. 删除测试表
     ```sql
-    drop table if exists nlp_dev.rule_txt_classify_epidemicGroup_test
+    drop table if exists nlp_dev.rule_txt_classify_epidemicGroup_test;
     ```
 
     2. 修改配置文件
