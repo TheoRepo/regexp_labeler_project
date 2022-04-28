@@ -1,0 +1,2 @@
+source_table = "preprocess.ds_txt_final" # 数据源底层表
+target_table = "dwb.rule_txt_classify_epidemicGroup" # 规则分类结构化目标表

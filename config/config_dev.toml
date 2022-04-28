@@ -1,0 +1,2 @@
+source_table = "preprocess.ds_txt_final_sample" # 数据源抽样表
+target_table = "nlp_dev.rule_txt_classify_epidemicGroup_test" # 规则分类结构化目标表

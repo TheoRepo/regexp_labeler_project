@@ -1,0 +1,12 @@
+*logger*
+.idea/
+.vscode/
+*__pycache__/
+*.out
+checkpoint/
+logger/
+bash/*
+saved_model/
+*.zip
+*ipynb_*/
+*.sql

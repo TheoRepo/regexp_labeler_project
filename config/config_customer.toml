@@ -1,0 +1,2 @@
+source_table = "preprocess.customer_domain_data" # 数据源底层表
+target_table = "customer_test_dwb.rule_txt_classify_epidemicGroup" # 规则分类结构化目标表
