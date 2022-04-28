@@ -64,7 +64,7 @@ python 3.7.4
     + 如果shell脚本在win下压缩后存在doc与unix不兼容问题,在Linux下将run.sh与data_extractor.sh格式转换,进入命令行操作模式:set ff=unix
 
 
-+ 测试说明
+## 测试说明
     + **第一步核验规则的正确性**
     + 因为SQL的正则规则和python的正则规则存在出入，所以需要对规则的正确性进行核验；
     + 因为测试流程的目标表，使用pyspark的SaveAsTable命令进行创建，无需写额外的建表语句
