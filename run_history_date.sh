@@ -1,30 +1,27 @@
 #!/usr/bin/bash
 
-num_date=$1
+start_date=$1
+end_date=$2
 
-function find_rand_date {
-    n=$1
-    start=$2
-    end=$3
+function list_date {
+    start=$1
+    end=$2
     # 计算从开始的日期到结束的日期间隔了几天
     length=$((($(date +%s -d "${end}") - $(date +%s -d "${start}"))/86400));
     dates=""
-    while [ $n -gt 0 ];
+    while [ $length -gt 0 ];
     do
-        # 生成和间隔天数数位相同的随机数
-        # 如果间隔12天，生成0-11之间的随机数
-        # 如果间隔120天，生成0-119之间的随机数
-        num=$((RANDOM%$length))
-        d=`date -d "$end -$num day" +%Y-%m-%d`
+        d=`date -d "$end -$length day" +%Y-%m-%d`
         # 在字符串结尾增加内容
         dates=${dates}" ${d}"
         # 循环指标 n-1
-        let n=`expr $n - 1`
+        let length=`expr $length - 1`
     done
     echo ${dates: 1}
 }
 
-dates=`find_rand_date $num_date 20200101 20220101`
+# 前开后闭
+dates=`list_date $start_date $end_date`
 echo $dates
 for d in $dates
 do
